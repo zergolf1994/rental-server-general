@@ -15,7 +15,7 @@ exports.getMaster = async (req, res) => {
     if (!cache.error) {
       let ArrayMaster = ["#EXTM3U", ...cache];
 
-    //  res.set("content-type", "application/x-mpegURL");
+      res.set("content-type", "application/x-mpegURL");
       return res.end(ArrayMaster.join(os.EOL).replace(/\[HOST\]/g, host));
     }
 
@@ -115,7 +115,7 @@ exports.getMaster = async (req, res) => {
     );
     let ArrayMaster = ["#EXTM3U", ...saveCache];
 
-   // res.set("content-type", "application/x-mpegURL");
+    res.set("content-type", "application/x-mpegURL");
     return res.end(ArrayMaster.join(os.EOL).replace(/\[HOST\]/g, host));
   } catch (err) {
     console.log(err);
@@ -240,7 +240,7 @@ exports.getIndex = async (req, res) => {
       }
     });
 
-    //res.set("content-type", "application/x-mpegURL");
+    res.set("content-type", "application/x-mpegURL");
     return res.end(hls_lists.join(os.EOL));
   } catch (err) {
     console.log(err);
