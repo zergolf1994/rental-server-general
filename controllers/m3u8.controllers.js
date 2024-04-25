@@ -227,9 +227,9 @@ exports.getIndex = async (req, res) => {
         return item;
       } else {
         if (c == 0) {
-          return `//${domain[c]}/${slug}-${item}.html`;
+          return `//${domain[c]}/${slug}-${item}.aaa`;
         } else {
-          const link = `//${domain[i]}/${slug}-${item}.html`;
+          const link = `//${domain[i]}/${slug}-${item}.aaa`;
           if (i == c) {
             i = 0;
           } else {
